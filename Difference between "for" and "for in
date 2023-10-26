@@ -1,1 +1,1 @@
-
+"for each" iterates a specified variable over all values of the specified object's properties. "for...in" iterates a specified variable over all properties of an object, in arbitrary order
