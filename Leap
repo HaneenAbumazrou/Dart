@@ -1,1 +1,13 @@
+void main() {
+  print("Enter the year ");
+  int? x = int.parse(stdin.readLineSync()!);
 
+  if (x % 400 == 0)
+    print("laep year");
+  else if (x % 100 == 0)
+    print("It's not a leap year");
+  else if (x % 4 == 0)
+    print(" It's a leap year");
+  else
+    print("It's not a leap year");
+}
