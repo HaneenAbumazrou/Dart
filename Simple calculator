@@ -1,1 +1,23 @@
+import "dart:io";
+void main() {
+  print("Enter the first number :");
+  num? no1 num.parse(stdin.readLineSync()!);
+  print("Enter the scond number :"); 
+  num? no2-num.parse(stdin.readLineSync()!);
+  print("add+, sub-, div/, mul*:"); 
+  String? action-stdin.readLineSync()!; 
 
+  if(action="add+" || action=="Add+")
+   addication (no1,no2);
+
+else if(action--"sub-" || action--"Sub-")
+Subtraction (no1,no2);
+
+else if(action--"div/" || action--"Div/")
+Divide(no1, no2);
+
+else if(action="mul*" || action=="Mul*") 
+Multiplication (no1, no2);
+
+else if (action="Mod" || action=="Mod")
+}
