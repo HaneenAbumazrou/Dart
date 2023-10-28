@@ -1,0 +1,60 @@
+class Vehicle {
+  String brand;
+  int year;
+
+  Vehicle(this.brand, this.year);
+
+  void honk() {
+    print('Vehicle honks!');
+  }
+
+  @override
+  String toString() {
+    return 'Brand: $brand, Year: $year';
+  }
+}
+class Car extends Vehicle {
+  int numberOfDoors;
+
+  Car(String brand, int year, this.numberOfDoors) : super(brand, year);
+
+  void startEngine() {
+    print('Car engine started.');
+  }
+
+  @override
+  String toString() {
+    return 'Car - ' + super.toString() + ', Doors: $numberOfDoors';
+  }
+}
+class Motorcycle extends Vehicle {
+  Motorcycle(String brand, int year) : super(brand, year);
+
+  void kickStart() {
+    print('Motorcycle kick-started.');
+  }
+
+  @override
+  void honk() {
+    print('Motorcycle honks!');
+  }
+
+  @override
+  String toString() {
+    return 'Motorcycle - ' + super.toString();
+  }
+}
+
+void main() {
+  var myCar = Car('Toyota', 2022, 4);
+  var myMotorcycle = Motorcycle('Honda', 2022);
+  print(myCar);
+  myCar.honk();
+  myCar.startEngine();
+
+  print('');
+
+  print(myMotorcycle);
+  myMotorcycle.honk();
+  myMotorcycle.kickStart();
+}
