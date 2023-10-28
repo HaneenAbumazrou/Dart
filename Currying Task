@@ -1,0 +1,20 @@
+Function curry(Function func) {
+  return (Object arg) {
+    return (Object nextArg) {
+      return func(arg, nextArg);
+    };
+  };
+}
+
+int add(int a, int b) {
+  return a + b;
+}
+
+void main() {
+  final curriedAdd = curry(add);
+
+  final add2 = curriedAdd(2);
+
+  print(add2(3));
+  print(add2(7));
+}
