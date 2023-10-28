@@ -1,0 +1,37 @@
+class Person {
+  String _name;
+  int _age;
+
+  Person(String name, int age) {
+    _name = name;
+    _age = age;
+  }
+
+  String get name => _name;
+  int get age => _age;
+
+  set name(String newName) {
+    if (newName.isNotEmpty) {
+      _name = newName;
+    } else {
+      print('Name cannot be empty');
+    }
+  }
+
+  set age(int newAge) {
+    if (newAge >= 0) {
+      _age = newAge;
+    } else {
+      print('Age cannot be negative');
+    }
+  }
+  void printDetails() {
+    print('Name: $_name, Age: $_age');
+  }
+}
+
+void main() {
+  var person = Person('Haneen', 24);
+  print('Name: ${person.name}');
+  print('Age: ${person.age}');
+}
