@@ -1,0 +1,13 @@
+Function outerFunction(int x) {
+  return (int y) {
+    return x + y;
+  };
+}
+
+void main() {
+  final add3 = outerFunction(3);
+  final add16 = outerFunction(16);
+
+  print(add3(5));
+  print(add16(3));
+}
