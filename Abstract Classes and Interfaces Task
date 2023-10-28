@@ -1,0 +1,25 @@
+abstract class Animal {
+  void makeSound();
+}
+
+abstract class Hunter {
+  void hunt();
+}
+
+class Lion extends Animal implements Hunter {
+  @override
+  void makeSound() {
+    print('Lion makes noising sounds.');
+  }
+
+  @override
+  void hunt() {
+    print('Lion hunt ferociously.');
+  }
+}
+
+void main() {
+  Lion lion = Lion();
+  lion.makeSound();
+  lion.hunt();
+}
